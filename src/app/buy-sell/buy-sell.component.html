@@ -1,0 +1,20 @@
+<p>buy-sell works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date & Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of tableData">
+            <td>{{ row.name }}</td>
+            <td>{{ row.name }}</td>
+            <td>
+                <button class="buy-button" role="button">Buy</button>
+                <button class="sell-button" role="button">Sell</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,121 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+
+
+.buy-button {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.buy-button:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.buy-button:hover {
+    background-color: #2c974b;
+}
+
+.buy-button:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+.buy-button:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+
+
+.sell-button {
+    appearance: none;
+    background-color: #b91e1e;
+    /* changed to red */
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.sell-button:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.sell-button:hover {
+    background-color: #a11c1c;
+    /* darker red for hover state */
+}
+
+.sell-button:focus {
+    box-shadow: rgba(204, 37, 37, 0.4) 0 0 0 3px;
+    /* red focus shadow */
+    outline: none;
+}
+
+.sell-button:disabled {
+    background-color: #d66b6b;
+    /* lighter red for disabled state */
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+
+.sell-button:active {
+    background-color: #a11c1c;
+    /* darker red for active state */
+    box-shadow: rgba(140, 30, 30, .2) 0 1px 0 inset;
+    /* adjusted inset shadow color */
+}

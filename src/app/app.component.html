@@ -1,11 +1,25 @@
 <main class="main">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">MyAlgorithm</div>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#table" class="nav-link">Table</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" id="search" class="search-input" placeholder="Search...">
+        <i class="search-icon"></i>
+      </div>
+    </div>
+  </nav>
   <div>
-    <div align="center">
+    <!-- <div align="center">
       <h1>Welcome to {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
-    </div>
+    </div> -->
     <div align="center">
-      <app-buy-sell></app-buy-sell>
+      <!-- <app-buy-sell></app-buy-sell> -->
+      <app-stock-search></app-stock-search>
     </div>
   </div>
 </main>

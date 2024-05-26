@@ -1,0 +1,6 @@
+1. Search stock option
+2. after search details of stock will appear
+	ratios, overall rating
+3. strategy
+	1. first page - list of strategy
+	2. second page - list of all stock which satisfy the strategy

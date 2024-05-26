@@ -1,17 +1,18 @@
 table {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
 }
 
 th,
 td {
-    border: 1px solid #ddd;
+    border: 5px solid #ddd;
     padding: 8px;
+    text-align: center;
 }
 
 th {
     background-color: #f4f4f4;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -39,6 +40,7 @@ th {
     touch-action: manipulation;
     vertical-align: middle;
     white-space: nowrap;
+    margin-right: 20px;
 }
 
 .buy-button:focus:not(:focus-visible):not(.focus-visible) {
@@ -119,3 +121,13 @@ th {
     box-shadow: rgba(140, 30, 30, .2) 0 1px 0 inset;
     /* adjusted inset shadow color */
 }
+main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }

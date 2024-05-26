@@ -1,5 +1,5 @@
-<p>buy-sell works!</p>
-<table>
+<input type="text" [(ngModel)]="inputValue" (input)="onInputChange()" placeholder="Enter 'buy' or 'sell'"/>
+<table class="main">
     <thead>
         <tr>
             <th>Name</th>
@@ -12,9 +12,14 @@
             <td>{{ row.name }}</td>
             <td>{{ row.name }}</td>
             <td>
-                <button class="buy-button" role="button">Buy</button>
-                <button class="sell-button" role="button">Sell</button>
+                <button [disabled]="!canBuy" class="buy-button" role="button">Buy</button>
+                <button [disabled]="!canSell" class="sell-button" role="button">Sell</button>
             </td>
         </tr>
     </tbody>
 </table>
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>

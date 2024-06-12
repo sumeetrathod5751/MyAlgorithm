@@ -32,7 +32,7 @@ th {
     font-weight: 600;
     line-height: 20px;
     padding: 6px 16px;
-    position: relative;
+    position: static;
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -81,7 +81,7 @@ th {
     font-weight: 600;
     line-height: 20px;
     padding: 6px 16px;
-    position: relative;
+    position: static;
     text-align: center;
     text-decoration: none;
     user-select: none;
@@ -129,5 +129,15 @@ main {
     align-items: center;
     padding: 1rem;
     box-sizing: inherit;
-    position: relative;
+    position: static;   
   }
+  .table-container{
+    /* position: static; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* display: flex; */
+    color: #000000;
+  }
+

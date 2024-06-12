@@ -8,7 +8,13 @@
            [matAutocomplete]="auto">
     <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
       @for (option of filteredOptions | async; track option) {
-      <mat-option [value]="option" (click)="stockDetails()">{{option}}</mat-option>
+        <mat-option class = "dropdown"  
+                    (click)="stockDetails(option)">
+          <div style="display: flex;flex-direction: column;">
+            <strong>{{option.name_of_company}}</strong>
+            {{option.symbol}}
+          </div>
+        </mat-option>
       }
     </mat-autocomplete>
   </div>
@@ -18,35 +24,16 @@
     <div class="card-container">
       <mat-card class="card">
         <mat-card-header>
-          <mat-card-title></mat-card-title>
-          <mat-card-subtitle></mat-card-subtitle>
+          <mat-card-title><h1>{{stockData?.name_of_company}}</h1></mat-card-title>
+          <!-- <mat-card-subtitle></mat-card-subtitle> -->
         </mat-card-header>
         <mat-card-actions>
-          <div>   
-            <h1>Title</h1>
             <div class="company-ratios">
               <ul class="top-ratios">
-                <li><strong>First Name:</strong> Sumeet </li>
-                <li><strong>Middle Name:</strong> Vitthal </li>
-                <li><strong>Last Name :</strong> Rathod </li>
-                <li><strong>First Name:</strong> Sumeet </li>
-                <li><strong>Middle Name:</strong> Vitthal </li>
-                <li><strong>Last Name :</strong> Rathod </li>
-                <li><strong>First Name:</strong> Sumeet </li>
-                <li><strong>Middle Name:</strong> Vitthal </li>
-                <li><strong>Last Name :</strong> Rathod </li>
-                <li><strong>First Name:</strong> Sumeet </li>
-                <li><strong>Middle Name:</strong> Vitthal </li>
-                <li><strong>Last Name :</strong> Rathod </li>
-                <li><strong>First Name:</strong> Sumeet </li>
-                <li><strong>Middle Name:</strong> Vitthal </li>
-                <li><strong>Last Name :</strong> Rathod </li>
-                <li><strong>First Name:</strong> Sumeet </li>
-                <li><strong>Middle Name:</strong> Vitthal </li>
-                <li><strong>Last Name :</strong> Rathod </li>
+                <li *ngFor="let ratio of stockDetailsData?.data?.company_ratios">
+                  <strong>{{ratio.ratio_name}}:</strong> {{ratio.ratio_value}} </li>
               </ul>
             </div>
-          </div>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -59,10 +46,49 @@
           <mat-card-subtitle></mat-card-subtitle>
         </mat-card-header>
         <mat-card-actions>
-          <div>   
+          <div>
             <h1>Title</h1>
             <div class="company-ratios">
               <ul class="top-ratios">
+                <!-- {{stockDetailsData}} -->
+                <li *ngFor="let ratio of stockDetailsData?.data"><strong>{{ratio}}</strong></li>
+                <!-- <li><strong>Middle Name:</strong> Vitthal </li>
+                <li><strong>Last Name :</strong> Rathod </li>
+                <li><strong>First Name:</strong> Sumeet </li>
+                <li><strong>Middle Name:</strong> Vitthal </li>
+                <li><strong>Last Name :</strong> Rathod </li>
+                <li><strong>First Name:</strong> Sumeet </li>
+                <li><strong>Middle Name:</strong> Vitthal </li>
+                <li><strong>Last Name :</strong> Rathod </li>
+                <li><strong>First Name:</strong> Sumeet </li>
+                <li><strong>Middle Name:</strong> Vitthal </li>
+                <li><strong>Last Name :</strong> Rathod </li>
+                <li><strong>First Name:</strong> Sumeet </li>
+                <li><strong>Middle Name:</strong> Vitthal </li>
+                <li><strong>Last Name :</strong> Rathod </li>
+                <li><strong>First Name:</strong> Sumeet </li>
+                <li><strong>Middle Name:</strong> Vitthal </li>
+                <li><strong>Last Name :</strong> Rathod </li> -->
+              </ul>
+            </div>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </mat-tab>
+  <mat-tab label="Third">
+    <div class="card-container">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <div>
+            <h1>Title</h1>
+            <div class="company-ratios">
+              <ul class="top-ratios">
+                <!-- {{stockDetailsData}} -->
                 <li><strong>First Name:</strong> Sumeet </li>
                 <li><strong>Middle Name:</strong> Vitthal </li>
                 <li><strong>Last Name :</strong> Rathod </li>
@@ -88,5 +114,5 @@
       </mat-card>
     </div>
   </mat-tab>
-  <mat-tab label="Third">Content 3</mat-tab>
+  
 </mat-tab-group>
